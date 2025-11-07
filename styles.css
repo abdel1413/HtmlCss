@@ -1,6 +1,9 @@
 body{
   background-color:rosybrown;
   font-family: Arial, sans-serif;
+  /* background: linear-gradient(to right, rgb(230, 230, 59), rgb(217, 65, 65)); */
+  background: radial-gradient(circle closest-side at center, red, yellow 50% , green);
+  
 }
 p{
   margin:  5px 0;
@@ -28,9 +31,8 @@ a{
 /* links */
 
 .todo-list-container{
-  background-color: #F0F0F0;
+  background-color:linear-gradient(to right red,yellow);
   box-shadow: 5px 5px 5px #e7d0d0;
- 
   
 }
 
@@ -40,9 +42,10 @@ ul li{
   margin: 5px;
   padding: 10px;
   width: 90%;
-  background-color: #E4F1E5;
+  /* background-color: #E4F1E5; */
   border-radius: 5px;
   box-shadow: 5px 5px  #bcc7bd;;
+  background: radial-gradient(circle closet-side at center,red, yellow 50%,green );
 
 
 }
@@ -97,4 +100,38 @@ border:2px solid green;
 
 .sub-item-link:active{
   color: red;
+}
+
+/* Blog post */
+
+
+.post-img{
+  width: 300px;
+  height: 300px;
+}
+.blog-post-card{
+  border-radius: 5px;
+  background-color: white;
+  width: 500px;
+  padding: 10px;
+}
+
+.blog-post-card >p{
+  text-align: center;
+}
+
+
+.read-more{
+  background-color: black;
+  color: white;
+  padding: 5px 5px;
+  font-size: 1.2rem;
+  border-radius:5px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.read-more:hover{
+  background-color:rgb(106, 93, 93)
 }
