@@ -23,3 +23,25 @@ a{
   max-width: 100%;
 
 }
+
+
+/* links */
+ul.sub-item-link{
+  text-decoration: none;
+
+}
+.sub-item-link:link{
+  text-decoration: none;
+  
+}
+
+.sub-item-link:hover{
+   color: blue;
+}
+
+.sub-item-link:visited{
+  color: red
+}
+.sub-item-link:focus{
+border:2px solid green;
+}
