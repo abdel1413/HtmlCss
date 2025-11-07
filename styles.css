@@ -5,6 +5,15 @@ body{
   background: radial-gradient(circle closest-side at center, red, yellow 50% , green);
   
 }
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
 p{
   margin:  5px 0;
 }
@@ -15,11 +24,10 @@ a{
   width: 300px;
   background-color: pink;
   padding: 20px;
-  margin-top: 100px;
   text-align: center;
   font-size: 16px;
-  margin-left :auto;
-  margin-right: auto;
+  
+ 
 }
 
 .profile-image{
@@ -30,18 +38,12 @@ a{
 
 /* links */
 
-.todo-list-container{
-  background-color:linear-gradient(to right red,yellow);
-  box-shadow: 5px 5px 5px #e7d0d0;
-  
-}
-
 ul li{
  
   border: 1px solid #E4F1E5;
   margin: 5px;
   padding: 10px;
-  width: 90%;
+  
   /* background-color: #E4F1E5; */
   border-radius: 5px;
   box-shadow: 5px 5px  #bcc7bd;;
@@ -58,16 +60,14 @@ ul li{
   display: flex;
   flex-direction:  column;
   align-items: center;
-  margin: 10px auto;
+  margin: 10px;
   width: 500px ;
-  max-width: 400pc;
+  max-width: 350px;
   font-size: 1.2rem;
 
 }
 
-.sub-item{
-   
-}
+
 ul.sub-item-link{
   text-decoration: none;
    list-style-type: initial;
@@ -105,33 +105,67 @@ border:2px solid green;
 /* Blog post */
 
 
+
+
 .post-img{
-  width: 300px;
-  height: 300px;
+  width: 380px;
+  height: 350px;
+ border-bottom: 2px solid #333;
+
 }
+
+img .post-img{
+ border-bottom: 1.3rem;
+}
+
+
+
+.post-content{
+  margin: 10px;
+  color: #666677;
+  text-align: center;
+  padding: 5px;
+  width: 400px
+}
+
+
 .blog-post-card{
   border-radius: 5px;
   background-color: white;
-  width: 500px;
+  width: 400px;
   padding: 10px;
+  text-align: center;
+  margin: 10px
 }
 
 .blog-post-card >p{
   text-align: center;
+  border:2px solid red;
 }
 
 
 .read-more{
+ display:inline-block;
   background-color: black;
   color: white;
-  padding: 5px 5px;
+  padding:5px;
   font-size: 1.2rem;
   border-radius:5px;
   margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: none;
+ 
 }
 .read-more:hover{
   background-color:rgb(106, 93, 93)
 }
+.post-title{
+  margin: 12px 0 ; 
+  font-weight: bold;
+  color: #333;
+}
+
+.post-excerpt{
+  margin:0,0,12px;
+  color: #444444;
+}
+
