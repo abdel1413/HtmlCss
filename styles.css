@@ -26,6 +26,7 @@ a{
   padding: 20px;
   text-align: center;
   font-size: 16px;
+  border-radius: 20px;
   
  
 }
@@ -38,19 +39,8 @@ a{
 
 /* links */
 
-ul li{
- 
-  border: 1px solid #E4F1E5;
-  margin: 5px;
-  padding: 10px;
-  
-  /* background-color: #E4F1E5; */
-  border-radius: 5px;
-  box-shadow: 5px 5px  #bcc7bd;;
-  background: radial-gradient(circle closet-side at center,red, yellow 50%,green );
 
 
-}
 
 .todo-list{
    list-style: none;
@@ -64,15 +54,26 @@ ul li{
   width: 500px ;
   max-width: 350px;
   font-size: 1.2rem;
-
+  
+  border-radius: 20px;
+  
 }
 
+ul li{
+  border: 1px solid #E4F1E5;
+  margin: 5px;
+  padding: 10px;
+  /* background-color: #E4F1E5; */
+  border-radius: 10px;
+  box-shadow: 5px 5px  #bcc7bd;;
+  /* background: radial-gradient(circle closet-side at center,red, yellow 50%,green ); */
+width: 80%;
+
+}
 
 ul.sub-item-link{
   text-decoration: none;
    list-style-type: initial;
-
-
 }
 .sub-item-link{
  
@@ -105,11 +106,31 @@ border:2px solid green;
 /* Blog post */
 
 
-
+.blog-post-card{
+  border-radius: 20px;
+  background-color: white;
+  width: 400px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px
+}
+.post-content{
+  margin: 10px;
+  color: #666677;
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+  border:2px solid rgb(194, 189, 189)
+ 
+}
+.post-content:hover{
+    border:2px solid #d3dbd4;
+    padding: 5px
+}
 
 .post-img{
   width: 380px;
-  height: 350px;
+  height: 320px;
  border-bottom: 2px solid #333;
 
 }
@@ -118,31 +139,9 @@ img .post-img{
  border-bottom: 1.3rem;
 }
 
-
-
-.post-content{
-  margin: 10px;
-  color: #666677;
-  text-align: center;
-  padding: 5px;
-  width: 400px
-}
-
-
-.blog-post-card{
-  border-radius: 5px;
-  background-color: white;
-  width: 400px;
-  padding: 10px;
-  text-align: center;
-  margin: 10px
-}
-
 .blog-post-card >p{
   text-align: center;
-  border:2px solid red;
 }
-
 
 .read-more{
  display:inline-block;
@@ -153,7 +152,6 @@ img .post-img{
   border-radius:5px;
   margin: 5px;
   overflow: none;
- 
 }
 .read-more:hover{
   background-color:rgb(106, 93, 93)
@@ -165,7 +163,7 @@ img .post-img{
 }
 
 .post-excerpt{
-  margin:0,0,12px;
   color: #444444;
+  
 }
 
