@@ -1,8 +1,8 @@
 body{
   background-color:rosybrown;
   font-family: Arial, sans-serif;
-  /* background: linear-gradient(to right, rgb(230, 230, 59), rgb(217, 65, 65)); */
-  background: radial-gradient(circle closest-side at center, red, yellow 50% , green);
+  background: linear-gradient(to right, rgb(230, 230, 59), rgb(217, 65, 65));
+  /* background: radial-gradient(circle closest-side at center, red, yellow 50% , green); */
   
 }
 
