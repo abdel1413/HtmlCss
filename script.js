@@ -94,7 +94,7 @@ progressPart.innerHTML= `
     <legend>Basic Information</legend>
     <p>Please enter your basic information.</p>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+    <input type="text" id="name" name="name"  required>
     <button type="button" class="next-btn">Next</button>
   </fieldset>
 
@@ -122,11 +122,11 @@ progressPart.innerHTML= `
   <fieldset class="form-step">
     <legend>Review</legend>
     <p>Review your answers before submitting.</p>
+     <div class='review'>some go here</div>
     <button type="button" class="prev-btn">Previous</button>
     <button type="submit">Submit</button>
   </fieldset>
 </form>`
-
 
 
 const form = document.getElementById('progressForm');
@@ -136,12 +136,12 @@ const currentStepSpan = document.getElementById('currentStep');
 const totalStepsSpan = document.getElementById('totalSteps');
 const percentageSpan = document.getElementById('percentage');
 
+
+
 const totalSteps = steps.length;
 let currentStep = 0;
 console.log(totalSteps)
-console.log(currentStepSpan.textContent)
-console.log(totalStepsSpan.textContent)
-console.log(percentageSpan.textContent)
+
 
 const updateProgress =()=>{
      const percentage =Math.round(((currentStep + 1)/totalSteps)* 100)
@@ -153,7 +153,7 @@ const updateProgress =()=>{
 }
 
 updateProgress()
-
+ 
 
 const showStep =(index)=>{
     steps.forEach((step,i) => {
@@ -164,20 +164,36 @@ const showStep =(index)=>{
 
 form.querySelectorAll(".next-btn").forEach(btn =>{
     btn.addEventListener('click',()=>{
-        if(currentStep < totalSteps +1){
+        if(currentStep < totalSteps -1){
             currentStep++
         }
-        console.log('cur', currentStep,'to', totalSteps)
+           if(currentStep ===(totalSteps -1)){
+            const inputName = form.querySelector('input[type=text]').value 
+            console.log(';in',inputName)
+            console.log('curr',currentStep ===  totalSteps-1)
+            form.querySelector(".review").innerHTML = `<p class='review-name'>${inputName}</p>`
+        }
         showStep(currentStep)
+       
     })
 })
-
 
 form.querySelectorAll('.prev-btn').forEach(btn =>{
     btn.addEventListener('click',()=>{
         if(currentStep >0){
             currentStep--
         }
+
+     
         showStep(currentStep)
     })
+   
 })
+
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    alert("Form submitted")
+})
+
+
+showStep(currentStep)
