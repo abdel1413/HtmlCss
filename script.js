@@ -37,3 +37,102 @@ idealCard.innerHTML = `<div class="card">
   <h2>Product Name</h2>
   <button>Buy Now</button>
 </div>`
+
+//dialog
+const dialog = document.querySelector('dialog')
+const close = dialog.querySelector(".close")
+const openDialog = document.querySelector("#open-modal")
+
+ close.addEventListener('click',()=>{
+    dialog.close()
+ })
+
+openDialog.addEventListener("click",()=>{
+dialog.showModal()
+})
+
+//close modal when clicked outside the dialog
+dialog.addEventListener('click',(e)=>{
+
+    const rect = dialog.getBoundingClientRect()
+    console.log('red',e.clientX >=rect.left )
+    console.log('red',e.clientX <=rect.right )
+    console.log('red', e.clientY >=rect.top ,)
+    console.log('red', e.clientY <= rect.bottom,)
+
+    const isInDialog =(
+        e.clientX >= rect.left &&
+         e.clientX <= rect.right &&
+          e.clientY >=rect.top &&
+           e.clientY <= rect.bottom
+        )
+
+        if(!isInDialog){
+            dialog.close()
+        }
+    
+})
+
+//progress bar
+
+const progressPart = document.querySelector(".progress-part")
+
+progressPart.innerHTML= `<form id="progressForm">
+  <div class="form-progress" aria-label="Form progress">
+    <label class="progress-label">Step <span id="currentStep">1</span> of <span id="totalSteps">4</span> (<span id="percentage">25%</span>)</label>
+    <div class="progress-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+
+  <!-- Step 1 -->
+  <fieldset class="form-step active">
+    <legend>Basic Information</legend>
+    <p>Please enter your basic information.</p>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <button type="button" class="next-btn">Next</button>
+  </fieldset>
+
+  <!-- Step 2 -->
+  <fieldset class="form-step">
+    <legend>Contact Details</legend>
+    <p>How can we reach you?</p>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="button" class="prev-btn">Previous</button>
+    <button type="button" class="next-btn">Next</button>
+  </fieldset>
+
+  <!-- Step 3 -->
+  <fieldset class="form-step">
+    <legend>Address</legend>
+    <p>Where do you live?</p>
+    <label for="address">Street:</label>
+    <input type="text" id="address" name="address" required>
+
+    <button type="button" class="prev-btn">Previous</button>
+    <button type="button" class="next-btn">Next</button>
+  </fieldset>
+
+  <!-- Step 4 -->
+  <fieldset class="form-step">
+    <legend>Review</legend>
+    <p>Review your answers before submitting.</p>
+
+    <button type="button" class="prev-btn">Previous</button>
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>`
+
+
+
+const form = document.getElementById('progressForm');
+const steps = form.querySelectorAll('.form-step');
+const progressBar = form.querySelector('.progress-bar');
+const currentStepSpan = document.getElementById('currentStep');
+const totalStepsSpan = document.getElementById('totalSteps');
+const percentageSpan = document.getElementById('percentage');
+
