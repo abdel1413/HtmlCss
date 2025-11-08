@@ -77,9 +77,13 @@ dialog.addEventListener('click',(e)=>{
 
 const progressPart = document.querySelector(".progress-part")
 
-progressPart.innerHTML= `<form id="progressForm">
+progressPart.innerHTML= `
+
+<form id="progressForm">
   <div class="form-progress" aria-label="Form progress">
-    <label class="progress-label">Step <span id="currentStep">1</span> of <span id="totalSteps">4</span> (<span id="percentage">25%</span>)</label>
+    <label class="progress-label">Step 
+    <span id="currentStep">1</span> of
+     <span id="totalSteps">4</span> (<span id="percentage">25%</span>)</label>
     <div class="progress-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
       <div class="progress-bar"></div>
     </div>
@@ -91,7 +95,6 @@ progressPart.innerHTML= `<form id="progressForm">
     <p>Please enter your basic information.</p>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
-
     <button type="button" class="next-btn">Next</button>
   </fieldset>
 
@@ -101,7 +104,6 @@ progressPart.innerHTML= `<form id="progressForm">
     <p>How can we reach you?</p>
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
-
     <button type="button" class="prev-btn">Previous</button>
     <button type="button" class="next-btn">Next</button>
   </fieldset>
@@ -112,7 +114,6 @@ progressPart.innerHTML= `<form id="progressForm">
     <p>Where do you live?</p>
     <label for="address">Street:</label>
     <input type="text" id="address" name="address" required>
-
     <button type="button" class="prev-btn">Previous</button>
     <button type="button" class="next-btn">Next</button>
   </fieldset>
@@ -121,7 +122,6 @@ progressPart.innerHTML= `<form id="progressForm">
   <fieldset class="form-step">
     <legend>Review</legend>
     <p>Review your answers before submitting.</p>
-
     <button type="button" class="prev-btn">Previous</button>
     <button type="submit">Submit</button>
   </fieldset>
@@ -136,3 +136,48 @@ const currentStepSpan = document.getElementById('currentStep');
 const totalStepsSpan = document.getElementById('totalSteps');
 const percentageSpan = document.getElementById('percentage');
 
+const totalSteps = steps.length;
+let currentStep = 0;
+console.log(totalSteps)
+console.log(currentStepSpan.textContent)
+console.log(totalStepsSpan.textContent)
+console.log(percentageSpan.textContent)
+
+const updateProgress =()=>{
+     const percentage =Math.round(((currentStep + 1)/totalSteps)* 100)
+  
+     progressBar.style.width = percentage +"%"
+     currentStepSpan.textContent = currentStep +1;
+     percentageSpan.textContent = percentage +"%";
+     form.querySelector('.progress-container').setAttribute('aria-valuenow',percentage)
+}
+
+updateProgress()
+
+
+const showStep =(index)=>{
+    steps.forEach((step,i) => {
+       step.classList.toggle('active', i===index)
+    })
+    updateProgress()
+}
+
+form.querySelectorAll(".next-btn").forEach(btn =>{
+    btn.addEventListener('click',()=>{
+        if(currentStep < totalSteps +1){
+            currentStep++
+        }
+        console.log('cur', currentStep,'to', totalSteps)
+        showStep(currentStep)
+    })
+})
+
+
+form.querySelectorAll('.prev-btn').forEach(btn =>{
+    btn.addEventListener('click',()=>{
+        if(currentStep >0){
+            currentStep--
+        }
+        showStep(currentStep)
+    })
+})
