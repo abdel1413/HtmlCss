@@ -235,3 +235,62 @@ img .post-img{
   background-color: #925f88; 
   color: white;
 }
+
+/* Breadcrumbs */
+
+
+
+
+.main-nav {
+  background-color: #333;
+  padding: 1rem;
+}
+
+.main-nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.breadcrumbs {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 1rem 0;
+}
+
+
+
+/* clustered card */
+
+.card-container{
+    width: 100%;
+    display: flex;
+
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  width: 300px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin: 8px 0;
+}
+.card p {
+  font-size: 1em;
+  margin: 8px 0;
+}
+
+.card button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 5px;
+  border: none;
+  cursor: pointer;
+}
