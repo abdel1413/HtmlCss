@@ -169,9 +169,13 @@ form.querySelectorAll(".next-btn").forEach(btn =>{
         }
            if(currentStep ===(totalSteps -1)){
             const inputName = form.querySelector('input[type=text]').value 
+            const email = form.querySelector('input[type=email]').value
+            const address = form.querySelector('input[name=address]').value
             console.log(';in',inputName)
             console.log('curr',currentStep ===  totalSteps-1)
-            form.querySelector(".review").innerHTML = `<p class='review-name'>${inputName}</p>`
+            form.querySelector(".review").innerHTML = `<p class='review-name'>${inputName}</p>
+            <p>${email}</p>
+            <p>${address}</p>`
         }
         showStep(currentStep)
        
