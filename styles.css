@@ -67,7 +67,7 @@ ul li{
   border: 1px solid #E4F1E5;
   margin: 5px;
   padding: 10px;
-  /* background-color: #E4F1E5; */
+  /* background-color: #E45; */
   border-radius: 10px;
   box-shadow: 5px 5px  #bcc7bd;;
   /* background: radial-gradient(circle closet-side at center,red, yellow 50%,green ); */
@@ -609,4 +609,54 @@ h2 {
   border: 1px solid #ddd;
   border-radius: 6px;
   background-color: #f7f9fc;
+}
+
+
+/* event flyer */
+
+
+.event-flyer{
+  
+    padding-top: 50px ;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  min-height: calc(100vh - 100px)
+
+}
+ header{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+.
+
+
+hr{
+  width: 100%;
+  font-size: 1.2em;
+}
+.h1, .p{
+  margin: .7em;
+}
+.event-flyer ul  li{
+    border:initial;
+    margin: none;
+  
+    box-shadow: initial;
+}
+main{
+  display:flex;
+ 
+}
+section{
+  width: 30%
+}
+
+footer{
+  text-align: center;
+  font-size: 1.2rem;
 }
