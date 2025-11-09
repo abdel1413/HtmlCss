@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #007bff; 
+}
+
+
 body{
   background-color:rosybrown;
   font-family: Arial, sans-serif;
@@ -526,4 +531,82 @@ button:disabled {
 .remove-btn:focus {
   background: #c0392b;
   outline: none;
+}
+
+
+#cart-total {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: right;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+#checkout-btn {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover,
+#checkout-btn:focus {
+  background-color: #0056b3;
+  outline: none;
+}
+
+
+/* INFO SESSION */
+
+.info-section {
+  font-family: sans-serif;
+  max-width: 400px;
+  margin: 30px auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.advanced-options {
+  margin-top: 20px;
+}
+
+#toggle-advanced-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+#toggle-advanced-btn:hover,
+#toggle-advanced-btn:focus {
+  background-color: #0056b3;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#advanced-details {
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f7f9fc;
 }
