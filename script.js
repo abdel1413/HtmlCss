@@ -201,3 +201,16 @@ form.addEventListener('submit',(e)=>{
 
 
 showStep(currentStep)
+
+//Shopping card
+
+const toggleBtn = document.querySelector("#toggle-advanced-btn")
+const details = document.querySelector("#advanced-details")
+toggleBtn.addEventListener("click",()=>{
+    const isHidden =details.classList.toggle('hidden')
+    toggleBtn.setAttribute('aria-expanded', !isHidden)
+     toggleBtn.textContent = isHidden ? 'More Info' : 'Hide Info';
+    if(!isHidden){
+        details.focus();
+    }
+})
