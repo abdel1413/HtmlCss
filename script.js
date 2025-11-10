@@ -241,3 +241,42 @@ birthdayCard.innerHTML = ` <div class="bd-card" id="greeting-card">
     <h2>Sharing your card...</h2>
     <p>Your card was shared on social media!</p>
   </section>`
+
+
+  const appContainer = document.querySelector(".application-container")
+  appContainer.innerHTML =`<div class='application-container'>
+    <form><label for='name'>
+        Name
+        <input type='text' placeholder="Enter your name"id='name'/>
+        </label>
+        <label for='email'>
+            Email
+        <input type='email' name='email' id='email'placeholder="your email"/>
+        </label>
+        <label for='position'>
+        <select id='position'>
+
+          <option>Select an option </option>
+          <option>Developer</option>
+          <option>Designer</option>
+          <option>Manager</option>
+          </label>
+        </select>
+        <fieldset class='radio-group'>
+          <legend>Availability</legend>
+          <label for='full-time'>
+            <input type='radio' name='availability' id='full-time'/>
+            Full-Time
+            </label>
+            <label for='part-time'>
+            <input type='radio' name='availability' id='part-time'/>
+            Part-Time
+            </label>
+        </fiedset> 
+
+        <label for='message'>
+            Why do you want this job?
+        <textarea id='message' placeholder='Enter your motivation'></textarea>
+        </label>
+    </form>
+</div>`
