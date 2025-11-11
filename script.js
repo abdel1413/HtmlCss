@@ -263,20 +263,15 @@ birthdayCard.innerHTML = ` <div class="bd-card" id="greeting-card">
           </label>
         </select>
         <fieldset class='radio-group'>
-          <legend>Availability</legend>
-          <label for='full-time'>
-            <input type='radio' name='availability' id='full-time'/>
-            Full-Time
-            </label>
-            <label for='part-time'>
-            <input type='radio' name='availability' id='part-time'/>
-            Part-Time
-            </label>
+          <legend> Availability </legend>
+          <label for='full-time'>Full-Time
+            <input type='radio' name='availability' id='full-time'/></label>
+            <label for='part-time'>Part-Time
+            <input type='radio' name='availability' id='part-time'/></label>
         </fieldset> 
 
-        <label for='message'>
-            Why do you want this job?
+        <label for='message'> Why do you want this job? </label>
         <textarea id='message' placeholder='Enter your motivation'></textarea>
-        </label>
+       
     </form>
 </div>`

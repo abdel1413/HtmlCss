@@ -750,7 +750,7 @@ footer{
 /* application form cont */
 
 input:focus,textarea:focus{
-  border: 1px solid yellow;
+  border: 2px solid rgb(238, 238, 159);
 }
 
 input:invalid, select:invalid, textarea:invalid{
@@ -775,5 +775,6 @@ background-color: green;
    color:blue;
  }
 input:first-of-type{
-  background-color: yellow;
+  background-color: rgb(230, 226, 226);
+  outline: gainsboro;
 }
