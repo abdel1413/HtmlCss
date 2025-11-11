@@ -272,7 +272,7 @@ birthdayCard.innerHTML = ` <div class="bd-card" id="greeting-card">
             <input type='radio' name='availability' id='part-time'/>
             Part-Time
             </label>
-        </fiedset> 
+        </fieldset> 
 
         <label for='message'>
             Why do you want this job?

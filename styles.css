@@ -243,8 +243,6 @@ img .post-img{
 /* Breadcrumbs */
 
 
-
-
 .main-nav {
   background-color: #333;
   padding: 1rem;
@@ -746,4 +744,36 @@ footer{
 }
 #send:target, #share:target{
   display: block;
+}
+
+
+/* application form cont */
+
+input:focus,textarea:focus{
+  border: 1px solid yellow;
+}
+
+input:invalid, select:invalid, textarea:invalid{
+  border:1px solid  red;
+}
+
+input:valid, select:valid, textarea:valid{
+  border:green;
+}
+
+button:hover{
+  background-color:lightblue;
+}
+
+
+.radio-group input[type="radio"]:checked{
+background-color: green;
+ box-shadow:2px 2px 2px gray;
+ border:  blue;
+}
+ .radio-group:has(#full-time:checked) label[for="full-time"],.radio-group:has(#part-time:checked) label[for="part-time"]{
+   color:blue;
+ }
+input:first-of-type{
+  background-color: yellow;
 }
